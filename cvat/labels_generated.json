@@ -30,9 +30,12 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false"
+        ]
       }
-    ]
+    ],
+    "type": "rectangle"
   },
   {
     "name": "truck",
@@ -65,9 +68,12 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false"
+        ]
       }
-    ]
+    ],
+    "type": "rectangle"
   },
   {
     "name": "van",
@@ -100,9 +106,12 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false"
+        ]
       }
-    ]
+    ],
+    "type": "rectangle"
   },
   {
     "name": "motorcycle",
@@ -135,9 +144,12 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false"
+        ]
       }
-    ]
+    ],
+    "type": "rectangle"
   },
   {
     "name": "person",
@@ -170,13 +182,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false"
+        ]
       }
-    ]
+    ],
+    "type": "rectangle"
   },
   {
     "name": "ignore_region",
     "color": "#808080",
-    "attributes": []
+    "attributes": [],
+    "type": "rectangle"
   }
 ]
