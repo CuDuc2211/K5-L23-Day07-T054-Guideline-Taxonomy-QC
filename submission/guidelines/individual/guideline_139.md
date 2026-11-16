@@ -1,11 +1,15 @@
-# Guideline gán nhãn — Bản cá nhân — 139
+# Guideline gán nhãn — v0.1 (Cá nhân) — 139
 
-- Mã thành viên 3 chữ số: 139.
-- Phiên bản: cá nhân — chờ đối chiếu ảnh.
-- Trạng thái: đã đọc qua bản nháp; chưa xác nhận hoàn tất khảo sát 40 ảnh.
-- AI hỗ trợ: GPT hỗ trợ tổng hợp tài liệu và diễn đạt.
+- **Phiên bản:** v0.1 — Bản đề xuất cá nhân, Pha 1.
+- **Người viết / tự kiểm:** 139.
+- **Loại nhãn:** Bounding box 2D trên ảnh đường phố.
+- **Công cụ:** CVAT, xuất định dạng COCO 1.0.
+- **Tài liệu tham chiếu:** `guideline/guideline_v0_starter.md`, `guideline/TEMPLATE_guideline.md` và HTML hướng dẫn Day 07.
+- **Phạm vi:** Đề xuất cá nhân để thảo luận; chưa thay thế guideline thống nhất của nhóm ở Pha 2.
 
-> Ví dụ ảnh dưới đây tham chiếu HTML hướng dẫn, chưa phải kết quả người học tự khảo sát.
+> **Ghi chú:** GPT hỗ trợ tổng hợp tài liệu và diễn đạt. Ví dụ ảnh được tham chiếu từ HTML hướng dẫn, còn chờ người học đối chiếu ảnh; chưa xác nhận hoàn tất khảo sát 40 ảnh. Chi tiết hỗ trợ AI ghi tại `submission/individual_notes/139.md`.
+
+---
 
 ## 1. Mục tiêu
 
