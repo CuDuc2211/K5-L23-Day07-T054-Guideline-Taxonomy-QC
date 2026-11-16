@@ -1,9 +1,9 @@
 # Thông tin nhóm
 
-- Tên nhóm:
-- Mã thành viên (ba chữ số):
-- Người điều phối:
-- Người review bản cuối:
+- Tên nhóm: T054
+- Mã thành viên (ba chữ số): 042, 124, 112, 139 (mã tạm do người điều phối đề xuất; cần nhóm/coach xác nhận trước khi nộp).
+- Người điều phối: 042.
+- Người review bản cuối: 042.
 - Commit chốt bài (điền ở kênh nộp sau khi commit):
 
 ## Kết quả tóm tắt (điền cuối bài)

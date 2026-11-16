@@ -1,8 +1,8 @@
-# Guideline gán nhãn — v0.1 (Cá nhân) — 2A202603124 - Bùi Lê Đình Văn | Nhóm T054
+# Guideline gán nhãn — v0.1 (Cá nhân) — 124
 
 - Phiên bản: v0.1 (Bản đề xuất cá nhân - Pha 1)
 - Ngày: 2026-11-16
-- Người viết / duyệt: Bùi Lê Đình Văn (MSHV: 2A202603124)
+- Người viết / duyệt: Bùi Lê Đình Văn (MSHV: 124)
 - Loại nhãn: Bounding box (hộp chữ nhật 2D) trên ảnh đường phố
 - Công cụ: CVAT, xuất định dạng COCO 1.0
 

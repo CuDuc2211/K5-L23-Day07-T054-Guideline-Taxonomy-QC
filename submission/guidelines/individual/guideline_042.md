@@ -1,9 +1,9 @@
-# Guideline cá nhân — bản nháp của 2A202603042 - Cù Việt Đức
+# Guideline cá nhân — mã 042
 
 > BẢN CÁ NHÂN CẦN HỌC VIÊN ĐỌC LẠI TRƯỚC KHI NỘP. Ghi các quan sát và quyết định do học viên cung cấp sau khi xem 40 ảnh; chưa phải guideline thống nhất của nhóm và chưa phải kết quả gán box thực tế.
 
 - Phiên bản: bản nháp cá nhân, dựa trên v0
-- Người viết và tự kiểm: Cù Việt Đức
+- Người viết và tự kiểm: 042
 - Công cụ: CVAT; bounding box; xuất COCO 1.0
 
 ## 1. Mục tiêu
@@ -73,4 +73,4 @@ Tượng người, ma-nơ-canh, hình in người/xe và các phương tiện ng
 
 - Ngưỡng cố định đọc từ `submission/taxonomy.json` (không sửa `rules` để đạt chỉ số).
 - Ca chưa rõ: đánh dấu `can_review` khi gán nhãn và đưa ra họp; không xem bản cá nhân của người khác trước khi nộp bản này.
-- Lịch sử: v0 → bản cá nhân của Đức (đề xuất, chưa duyệt nhóm): bổ sung ngưỡng che 0/30/70%, box phần nhìn thấy khi che, `truncated` ở mép ảnh, ngưỡng 20 px từ taxonomy, xử lý cụm quá bé/ảnh mờ và các ngoại lệ xe chở xe `img_002`/`024`, người bị che `img_006`, phản chiếu `img_020`, tuk-tuk `img_035`. Quyết định về chồng lấn ignore, vệt nhòe, người ngồi trên xe và vật ngoài taxonomy được thêm theo xác nhận của học viên; đồ chơi/xe chủ vẫn để họp.
+- Lịch sử: v0 → bản cá nhân mã 042 (đề xuất, chưa duyệt nhóm): bổ sung ngưỡng che 0/30/70%, box phần nhìn thấy khi che, `truncated` ở mép ảnh, ngưỡng 20 px từ taxonomy, xử lý cụm quá bé/ảnh mờ và các ngoại lệ xe chở xe `img_002`/`024`, người bị che `img_006`, phản chiếu `img_020`, tuk-tuk `img_035`. Quyết định về chồng lấn ignore, vệt nhòe, người ngồi trên xe và vật ngoài taxonomy được thêm theo xác nhận của học viên; đồ chơi/xe chủ vẫn để họp.

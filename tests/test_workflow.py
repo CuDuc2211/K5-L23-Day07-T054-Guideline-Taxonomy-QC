@@ -231,11 +231,18 @@ class WorkflowTest(unittest.TestCase):
         self.review(round_number=2)
         self.assertIn("**RELEASE**", self.run_script("qc_report", "--round", "2"))
 
-    def test_assignment_rejects_unsafe_member_and_symlink_destination(self):
+    def test_assignment_rejects_unsafe_member(self):
         self.run_script("split_assign", "--members", "../data,102", "--copy-images", success=False)
+
+    def test_assignment_rejects_symlink_destination(self):
         output = self.root / "work"
         output.mkdir()
-        (output / "101").symlink_to(self.root / "data", target_is_directory=True)
+        try:
+            (output / "101").symlink_to(self.root / "data", target_is_directory=True)
+        except OSError as exc:
+            if getattr(exc, "winerror", None) == 1314:
+                self.skipTest("Windows account lacks symlink privilege")
+            raise
         self.run_script("split_assign", "--members", "101,102", "--copy-images", success=False)
         self.assertEqual(sorted(path.name for path in self.images.iterdir()), self.names)
 
