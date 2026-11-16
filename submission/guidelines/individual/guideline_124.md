@@ -1,4 +1,4 @@
-# Guideline gán nhãn — v0.1 (Cá nhân) — 2A202603124 - Bùi Lê Đình Văn | Nhóm T054
+# Guideline gán nhãn — v0.1 (Cá nhân) — 124
 
 - Phiên bản: v0.1 (Bản đề xuất cá nhân - Pha 1)
 - Ngày: 2026-11-16
