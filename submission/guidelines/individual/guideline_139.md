@@ -1,12 +1,11 @@
-# Guideline gán nhãn — Bản cá nhân
+# Guideline gán nhãn — Bản cá nhân — 139
 
-- MSHV tạm dùng: 2A202603139.
-- Mã thành viên 3 chữ số: __________.
+- Mã thành viên 3 chữ số: 139.
 - Phiên bản: cá nhân — chờ đối chiếu ảnh.
 - Trạng thái: đã đọc qua bản nháp; chưa xác nhận hoàn tất khảo sát 40 ảnh.
 - AI hỗ trợ: GPT hỗ trợ tổng hợp tài liệu và diễn đạt.
 
-> Tên file theo MSHV chỉ dùng tạm; trước khi nộp cần đổi sang `guideline_<mã>.md` theo mã 3 chữ số. Ví dụ ảnh dưới đây tham chiếu HTML hướng dẫn, chưa phải kết quả người học tự khảo sát.
+> Ví dụ ảnh dưới đây tham chiếu HTML hướng dẫn, chưa phải kết quả người học tự khảo sát.
 
 ## 1. Mục tiêu
 
@@ -115,6 +114,8 @@ Bảng này ghi các thay đổi của riêng bản guideline này, không phả
 | v0 — tài liệu tham chiếu | Dùng guideline v0 của bài làm điểm xuất phát; không sửa file v0 gốc. | `guideline/guideline_v0_starter.md` định nghĩa lớp sơ lược, mô tả mức che bằng từ định tính và chưa có ca khó. |
 | Cá nhân — nháp lần 1 | Bổ sung định nghĩa lớp, điều kiện loại trừ, ngưỡng che khuất và các quy tắc R-01 đến R-10; giữ nguyên ngưỡng QC trong taxonomy. | Đối chiếu v0, `guideline/TEMPLATE_guideline.md` và `submission/taxonomy.json`. AI hỗ trợ soạn; chưa xác nhận khảo sát ảnh. |
 | Cá nhân — nháp lần 2 | Chuẩn hóa bố cục 5 mục; bổ sung ví dụ và bảng ca khó tham chiếu từ HTML; đề xuất thảo luận thêm bus và tuk-tuk ở Pha 2. | Hướng dẫn HTML nêu xe chở xe (`img_002.jpg`), tuk-tuk (`img_004.jpg`, `img_035.jpg`), xe buýt (`img_009.jpg`, `img_037.jpg`), tượng, phản chiếu và vật mô phỏng. Đây là nguồn tài liệu, chưa phải quan sát cá nhân đã kiểm chứng. |
-| Cá nhân — nháp lần 3 (hiện tại) | Làm rõ phạm vi lịch sử cá nhân và ghi lại những chỉnh sửa thực tế, thay dòng hẹn cập nhật chung chung. Tạm dùng MSHV trong tên file, để trống mã thành viên 3 chữ số. | Người học đã đọc qua bản nháp và yêu cầu chỉnh file cá nhân; không ghi nhận quyết định nhóm, kết quả IAA hoặc QC chưa thực hiện. |
+| Cá nhân — nháp lần 3 | Làm rõ phạm vi lịch sử cá nhân và ghi lại những chỉnh sửa thực tế, thay dòng hẹn cập nhật chung chung. Tạm dùng MSHV trong tên file, để trống mã thành viên 3 chữ số. | Người học đã đọc qua bản nháp và yêu cầu chỉnh file cá nhân; không ghi nhận quyết định nhóm, kết quả IAA hoặc QC chưa thực hiện. |
+
+| Cá nhân — cập nhật mã 139 (hiện tại) | Đồng bộ mã thành viên 139, đổi tên guideline và ghi chú cá nhân sang tên dùng ba chữ số, cập nhật liên kết giữa hai file. | Theo mã tạm trong `TEAM.md` và xác nhận của người học; không thay đổi quy tắc gán nhãn. |
 
 Sau khi tự đối chiếu ảnh, thêm dòng mới nêu đúng quy tắc đã đổi, tên ảnh và lý do; không cần tạo phiên bản giả nếu chưa có thay đổi. Các nhãn “nháp lần 1–3” ở đây chỉ mô tả các lượt biên tập, không chứng minh đã có commit hay bản lưu riêng cho từng lượt. Giữ nguyên bản cá nhân sau khi đã nộp riêng.
