@@ -1,4 +1,4 @@
-# Day 07 Lab —T054: 2A202603042 - Cù Việt Đức, 2A202603124 - Bùi Lê Đình Văn, 2A202603112 - Nguyễn Hán Trường Giang, 2A202603139 - Nguyễn Văn Hoà
+# Day 07 Lab — Nhóm T054
 
 **Nhóm 2–5 người · 4 giờ · 40 ảnh đường phố · gán box bằng CVAT**
 
