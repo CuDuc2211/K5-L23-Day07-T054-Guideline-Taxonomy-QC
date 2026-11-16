@@ -5,9 +5,7 @@
 - **Loại nhãn:** Bounding box 2D trên ảnh đường phố.
 - **Công cụ:** CVAT, xuất định dạng COCO 1.0.
 - **Tài liệu tham chiếu:** `guideline/guideline_v0_starter.md`, `guideline/TEMPLATE_guideline.md` và HTML hướng dẫn Day 07.
-- **Phạm vi:** Đề xuất cá nhân để thảo luận; chưa thay thế guideline thống nhất của nhóm ở Pha 2.
-
-> **Ghi chú:** GPT hỗ trợ tổng hợp tài liệu và diễn đạt. Ví dụ ảnh được tham chiếu từ HTML hướng dẫn, còn chờ người học đối chiếu ảnh; chưa xác nhận hoàn tất khảo sát 40 ảnh. Chi tiết hỗ trợ AI ghi tại `submission/individual_notes/139.md`.
+- **Phạm vi:** Đề xuất cá nhân phục vụ thảo luận Pha 2.
 
 ---
 
@@ -21,26 +19,26 @@ Không suy đoán đối tượng hoàn toàn không nhìn thấy. Phân biệt 
 
 ### Lớp
 
-Mỗi đối tượng nhận đúng một lớp. Chưa tự thêm lớp vào taxonomy chung.
+Mỗi đối tượng nhận đúng một lớp. Các lớp bổ sung được chốt cùng taxonomy ở Pha 2.
 
-| Lớp | Định nghĩa thao tác dự kiến | Dễ nhầm / điều kiện loại | Ví dụ / đối chiếu |
+| Lớp | Định nghĩa | Dễ nhầm / điều kiện loại | Ví dụ / đối chiếu |
 |---|---|---|---|
-| `car` | Ô tô con chở người, gồm sedan, hatchback, SUV khi nhận dạng được. | Không dùng làm lớp mặc định cho mọi phương tiện bốn bánh; phân biệt xe tải và van. | Ô tô trên xe vận chuyển: `img_002.jpg` theo HTML |
-| `truck` | Xe tải hoặc phương tiện có khoang/thùng chở hàng riêng; đề xuất xếp bán tải vào đây. | Bán tải lắp nắp thùng và xe đặc chủng cần quy tắc chốt riêng. | Xe vận chuyển ở `img_002.jpg`; bán tải cần chốt ở `img_037.jpg` theo HTML |
-| `van` | Xe thùng kín cỡ nhỏ với khoang hàng/người liền thân xe. | Không chỉ dựa vào kích thước box để phân biệt van, bus và truck. | Đối chiếu ca bán tải `img_037.jpg` theo HTML; ví dụ van cần tự xác nhận |
-| `motorcycle` | Xe máy hoặc mô tô có động cơ. | Không gồm người điều khiển; không tự ép xe đạp hoặc phương tiện ba bánh vào lớp này. | Đối chiếu ca ngoài lớp: xe đạp/xích lô `img_006.jpg`, `img_029.jpg`, `img_039.jpg` theo HTML |
-| `person` | Người thật nhìn thấy trong ảnh, gồm người đi bộ, người điều khiển và người ngồi trên xe. | Không gán tượng, ma-nơ-canh, chân dung in hoặc người chỉ xuất hiện qua phản chiếu. | Phản ví dụ theo HTML: `img_017.jpg`, `img_018.jpg`, `img_033.jpg` |
-| `ignore_region` | Vùng được bỏ qua khi không gán từng đối tượng theo quy tắc vật quá nhỏ hoặc cụm quá dày. | Không phải lớp vật thể; không dùng tùy tiện để che ca khó hoặc đối tượng bị bỏ sót. | Xác định bằng kích thước dưới 20 px hoặc cụm dày theo quy tắc nhóm; không suy từ tên ảnh |
+| `car` | Ô tô con chở người, gồm sedan, hatchback, SUV khi nhận dạng được. | Không dùng làm lớp mặc định cho mọi phương tiện bốn bánh; phân biệt xe tải và van. | Ô tô trên xe vận chuyển: `img_002.jpg` |
+| `truck` | Xe tải hoặc phương tiện có khoang/thùng chở hàng riêng; đề xuất xếp bán tải vào đây. | Bán tải lắp nắp thùng và xe đặc chủng cần quy tắc chốt riêng. | Xe vận chuyển ở `img_002.jpg`; bán tải cần chốt ở `img_037.jpg` |
+| `van` | Xe thùng kín cỡ nhỏ với khoang hàng/người liền thân xe. | Không chỉ dựa vào kích thước box để phân biệt van, bus và truck. | Phân biệt với bán tải có nắp thùng ở `img_037.jpg` |
+| `motorcycle` | Xe máy hoặc mô tô có động cơ. | Không gồm người điều khiển; không tự ép xe đạp hoặc phương tiện ba bánh vào lớp này. | Đối chiếu ca ngoài lớp: xe đạp/xích lô `img_006.jpg`, `img_029.jpg`, `img_039.jpg` |
+| `person` | Người thật nhìn thấy trong ảnh, gồm người đi bộ, người điều khiển và người ngồi trên xe. | Không gán tượng, ma-nơ-canh, chân dung in hoặc người chỉ xuất hiện qua phản chiếu. | Phản ví dụ: `img_017.jpg`, `img_018.jpg`, `img_033.jpg` |
+| `ignore_region` | Vùng được bỏ qua khi không gán từng đối tượng theo quy tắc vật quá nhỏ hoặc cụm quá dày. | Không phải lớp vật thể; không dùng tùy tiện để che ca khó hoặc đối tượng bị bỏ sót. | Vật dưới 20 px hoặc cụm quá dày, không thể tách từng vật |
 
-**Đề xuất cần thảo luận:** nếu phạm vi dữ liệu yêu cầu nhận diện xe buýt và tuk-tuk, cân nhắc lớp `bus` và `tuk_tuk` ở Pha 2. Chưa coi đây là taxonomy đã thống nhất.
+Đề xuất bổ sung `bus` cho xe buýt và `tuk_tuk` cho xe ba bánh có động cơ dạng tuk-tuk. Nhóm chốt hai lớp này trong taxonomy ở Pha 2.
 
 Vật ngoài taxonomy: không gán nhãn sai chỉ để có một lớp. Ghi lại tên ảnh, vị trí và câu hỏi để nhóm quyết định phạm vi. Không tự biến mọi vật ngoài phạm vi thành `ignore_region`.
 
 ### Thuộc tính
 
-Các ngưỡng che khuất dưới đây là đề xuất định lượng, người học cần tự xác nhận sau khảo sát. Tỉ lệ che ước lượng tương đối so với toàn bộ vật; không vẽ box suy diễn phần bị che.
+Ước lượng tỉ lệ che khuất so với toàn bộ vật để chọn thuộc tính. Box vẫn ôm phần nhìn thấy, không bao phần khuất do suy đoán.
 
-| Thuộc tính | Giá trị | Quy tắc dự kiến |
+| Thuộc tính | Giá trị | Quy tắc |
 |---|---|---|
 | `occluded_level` | `0` | Không bị vật khác che khuất. |
 | | `1` | Bị che trên 0% đến 30%. |
@@ -62,15 +60,15 @@ Che bởi vật khác và cắt bởi biên ảnh là hai hiện tượng khác 
 - **R-05 — Vật nhỏ:** giữ ngưỡng chiều cao box 20 px theo `rules`: vật có chiều cao dưới 20 px không gán box đối tượng riêng; dùng vùng ignore phù hợp theo quy tắc đã chốt. Không mặc nhiên bỏ qua vật đúng 20 px.
 - **R-06 — Cụm dày:** chỉ dùng `ignore_region` cho khu vực không thể tách vật đáng tin cậy theo quy tắc nhóm; ôm vùng cần bỏ qua nhỏ nhất hợp lý, tránh phủ cả đối tượng rõ bên cạnh.
 - **R-07 — Cắt mép:** tọa độ box phải nằm trong ảnh, ôm phần còn nhìn thấy và đặt `truncated=yes` khi vật bị biên ảnh cắt.
-- **R-08 — Xe chủ:** đề xuất loại phần xe gắn camera khỏi đối tượng mục tiêu. Người học cần kiểm tra tính phù hợp và chốt với nhóm trước lượt gán độc lập.
+- **R-08 — Xe chủ:** không gán phần xe chủ gắn camera vào đối tượng mục tiêu.
 - **R-09 — Ca chưa chắc:** nếu đã vẽ được box nhưng chưa chắc quyết định, bật `can_review`. Nếu chưa thể vẽ box, ghi tên ảnh, mã người gán, vị trí và câu hỏi vào phiếu vấn đề cấp ảnh; không đoán để điền cho đủ.
-- **R-10 — Hàng hóa:** đề xuất không kéo box phương tiện bao toàn bộ hàng hóa nhô ra; cần tự kiểm tra ca thực tế và chốt ranh giới trong buổi họp nhóm.
+- **R-10 — Hàng hóa:** không kéo box phương tiện bao toàn bộ hàng hóa nhô ra. Nếu không xác định được ranh giới xe và hàng, đánh dấu cần review.
 
 ## 4. Ca khó
 
-Các ca dưới đây được mô tả trong `K5-L23-Day07-Guideline-Taxonomy-QC.html` của repo gốc. Hướng xử lý là đề xuất từ tài liệu, cần người học tự mở ảnh kiểm tra; không ghi nhận là ca đã tự tìm ra.
+Nguồn tình huống: `K5-L23-Day07-Guideline-Taxonomy-QC.html` của repo gốc. Bảng ghi các phương án đề xuất cho buổi thảo luận Pha 2.
 
-| Ảnh | Tình huống theo HTML | Quyết định đề xuất | Lý do |
+| Ảnh | Tình huống | Quyết định đề xuất | Lý do |
 |---|---|---|---|
 | `img_002.jpg` | Xe tải chở ô tô trên hai sàn. | Box riêng cho xe vận chuyển và từng ô tô thật đủ điều kiện. | Mỗi xe là đối tượng độc lập; R-03. |
 | `img_004.jpg`, `img_035.jpg` | Tuk-tuk chưa có lớp phù hợp trong v0. | Đề xuất thêm `tuk_tuk` ở Pha 2. | Không ép vào lớp motorcycle khi định nghĩa không phù hợp. |
@@ -80,8 +78,6 @@ Các ca dưới đây được mô tả trong `K5-L23-Day07-Guideline-Taxonomy-Q
 | `img_033.jpg`, `img_038.jpg` | Ma-nơ-canh và đồ chơi. | Không gán person hoặc lớp phương tiện cho vật mô phỏng. | Không phải đối tượng thật; R-04. |
 | `img_035.jpg` | Tuk-tuk có hàng hóa nhô cao. | Đề xuất không bao cả hàng hóa vào box xe; cần nhóm chốt. | Làm rõ phạm vi box; R-10. |
 | `img_037.jpg` | Bán tải có nắp thùng cao, dễ nhầm van. | Đề xuất truck khi nhận dạng rõ cấu trúc bán tải; chưa chắc thì hỏi reviewer. | Phân loại theo cấu trúc, không riêng hình dạng nắp. |
-
-Sau khi tự khảo sát đủ 40 ảnh, bổ sung hoặc sửa các đề xuất trên và ghi ba ca quan sát thật vào ghi chú cá nhân.
 
 ## 5. QC và phiên bản
 
@@ -101,25 +97,15 @@ Không sửa mục `rules` trong taxonomy để làm số liệu đạt chuẩn.
 
 IAA cao không chứng minh nhãn đúng: hai người có thể cùng sai hoặc cùng bỏ sót. Phải review nội dung thực tế. Số liệu chạy mẫu trong hướng dẫn không phải kết quả nhóm.
 
-### Quy trình cá nhân và thay đổi
+### Xử lý ca mơ hồ và quản lý phiên bản
 
-1. Người học tự khảo sát 40 ảnh, hoàn thiện các chỗ CHƯA ĐIỀN và ghi nhận việc dùng AI hỗ trợ soạn nháp trong ghi chú cá nhân.
-2. Nộp riêng bản guideline; giữ nguyên bản đã nộp. Chỉ xem bản đồng đội sau khi mọi người nộp xong.
-3. Họp Pha 2 để chốt guideline v1.0 và taxonomy chung. Các quy tắc đề xuất ở bản này không tự trở thành quy tắc nhóm.
-4. Gán nhãn Pha 3 độc lập theo v1.0 đã khóa, không theo bản nháp chưa duyệt này.
-5. Thay đổi sau calibration phải ghi lịch sử; thay đổi ngữ nghĩa cần kiểm lại toàn lô theo quy trình bài.
+- Ca chưa rõ lớp, phạm vi box hoặc thuộc tính: bật `can_review`; nếu chưa vẽ được box, ghi vấn đề cấp ảnh kèm vị trí cụ thể.
+- Nhóm chốt các bất đồng trước khi khóa guideline v1.0. Trong lượt gán độc lập, dùng cùng bản guideline và taxonomy đã khóa.
+- Giữ nguyên bản guideline cá nhân sau khi nộp riêng. Quy tắc thay đổi sau calibration được ghi ở bản chung; thay đổi ngữ nghĩa cần kiểm lại toàn lô.
 
-### Lịch sử chỉnh sửa guideline cá nhân
-
-Bảng này ghi các thay đổi của riêng bản guideline này, không phải lịch sử thống nhất của nhóm và không phải bảng kết quả quan sát ảnh. Có thể ghi thay đổi dựa trên tài liệu; chỉ ghi “đã quan sát/kiểm chứng” khi thực sự tự xem ảnh. Lịch sử bản chung được nhóm quản lý trong guideline thống nhất ở Pha 2 và bản calibration ở Pha 5.
+### Lịch sử thay đổi
 
 | Phiên bản | Thay đổi | Lý do / bằng chứng |
 |---|---|---|
-| v0 — tài liệu tham chiếu | Dùng guideline v0 của bài làm điểm xuất phát; không sửa file v0 gốc. | `guideline/guideline_v0_starter.md` định nghĩa lớp sơ lược, mô tả mức che bằng từ định tính và chưa có ca khó. |
-| Cá nhân — nháp lần 1 | Bổ sung định nghĩa lớp, điều kiện loại trừ, ngưỡng che khuất và các quy tắc R-01 đến R-10; giữ nguyên ngưỡng QC trong taxonomy. | Đối chiếu v0, `guideline/TEMPLATE_guideline.md` và `submission/taxonomy.json`. AI hỗ trợ soạn; chưa xác nhận khảo sát ảnh. |
-| Cá nhân — nháp lần 2 | Chuẩn hóa bố cục 5 mục; bổ sung ví dụ và bảng ca khó tham chiếu từ HTML; đề xuất thảo luận thêm bus và tuk-tuk ở Pha 2. | Hướng dẫn HTML nêu xe chở xe (`img_002.jpg`), tuk-tuk (`img_004.jpg`, `img_035.jpg`), xe buýt (`img_009.jpg`, `img_037.jpg`), tượng, phản chiếu và vật mô phỏng. Đây là nguồn tài liệu, chưa phải quan sát cá nhân đã kiểm chứng. |
-| Cá nhân — nháp lần 3 | Làm rõ phạm vi lịch sử cá nhân và ghi lại những chỉnh sửa thực tế, thay dòng hẹn cập nhật chung chung. Tạm dùng MSHV trong tên file, để trống mã thành viên 3 chữ số. | Người học đã đọc qua bản nháp và yêu cầu chỉnh file cá nhân; không ghi nhận quyết định nhóm, kết quả IAA hoặc QC chưa thực hiện. |
-
-| Cá nhân — cập nhật mã 139 (hiện tại) | Đồng bộ mã thành viên 139, đổi tên guideline và ghi chú cá nhân sang tên dùng ba chữ số, cập nhật liên kết giữa hai file. | Theo mã tạm trong `TEAM.md` và xác nhận của người học; không thay đổi quy tắc gán nhãn. |
-
-Sau khi tự đối chiếu ảnh, thêm dòng mới nêu đúng quy tắc đã đổi, tên ảnh và lý do; không cần tạo phiên bản giả nếu chưa có thay đổi. Các nhãn “nháp lần 1–3” ở đây chỉ mô tả các lượt biên tập, không chứng minh đã có commit hay bản lưu riêng cho từng lượt. Giữ nguyên bản cá nhân sau khi đã nộp riêng.
+| v0 — bản khởi đầu | Định nghĩa sơ lược các lớp và thuộc tính. | `guideline/guideline_v0_starter.md` chưa có ngưỡng che khuất cụ thể và bảng ca khó. |
+| v0.1 — đề xuất cá nhân | Làm rõ định nghĩa lớp, ngưỡng thuộc tính, quy tắc R-01–R-10; bổ sung ca khó và đề xuất lớp bus, tuk-tuk. | Đối chiếu template, taxonomy và các tình huống trong HTML: xe chở xe, xe ba bánh, xe buýt, tượng, phản chiếu và bán tải có nắp thùng. |
