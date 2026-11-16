@@ -22,7 +22,7 @@ Mỗi vật được gán đúng một lớp đối tượng nếu nhận biết
 | `van` | Xe thùng kín cỡ nhỏ. | Không dùng cho xe buýt chỉ vì không có lớp `bus`. |
 | `motorcycle` | Xe máy, mô tô; **theo quyết định nhóm gồm tuk-tuk**. | `img_035`: box ôm xe/bộ phận cố định, **không ôm hàng rời**; người trên xe có box `person` riêng nếu đủ điều kiện. |
 | `person` | Người thật, kể cả người đi bộ và người ngồi/điều khiển xe. | Không gán tượng, ma-nơ-canh, hình in hay người chỉ hiện trong phản chiếu. |
-| `ignore_region` | Vùng bỏ qua cho đối tượng mục tiêu không nhận biết được hoặc đơn lẻ nhận rõ nhưng box cao dưới 20 px; không phải lớp vật. | Có thể chồng một phần box hợp lệ nếu vẫn giữ box của vật rõ; không thay box của vật nhận rõ và cao ≥20 px; không dùng cho xe buýt/đồ chơi ngoài phạm vi. |
+| `ignore_region` | Vùng bỏ qua cho đối tượng mục tiêu không nhận biết được hoặc đơn lẻ nhận rõ nhưng box cao dưới 20 px không cần gán từng vật.; không phải lớp vật. | Có thể chồng một phần box hợp lệ nếu vẫn giữ box của vật rõ; không thay box của vật nhận rõ và cao ≥20 px; không dùng cho xe buýt/đồ chơi ngoài phạm vi. |
 
 **Ngoài taxonomy:** không thêm `bus`; xe buýt không gán và không ép vào `truck`/`van`. Phương tiện khác ngoài các lớp không tự gán lớp gần nhất. Hình in, tượng, đồ chơi, xe chỉ hiện qua gương và bộ phận xe gắn camera không gán.
 
