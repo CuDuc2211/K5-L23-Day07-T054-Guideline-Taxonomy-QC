@@ -1,9 +1,4 @@
-# Guideline gán nhãn — v0 (bản khởi đầu)
-
-> **Đây là bản do giảng viên viết nhanh. Nó CHƯA đủ dùng.**
-> Đừng sửa file này. Hãy copy sang `submission/guidelines/individual/` rồi sửa bản của bạn
-> (xem `GUIDE.md`, Pha 1).
-
+# Guideline gán nhãn — mã 112
 
 - **Phiên bản** v0.1, bản đề xuất cá nhân Pha 1
 - **Ngày** 2026-11-16
