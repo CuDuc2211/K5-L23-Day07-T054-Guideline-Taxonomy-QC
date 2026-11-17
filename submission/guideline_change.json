@@ -1,0 +1,4 @@
+{
+  "kind": "semantic",
+  "summary": "Làm rõ ranh giới phân biệt car/van/truck (R-01), quy tắc thu gọn ignore_region không phủ trùm đối tượng rõ >=20px (R-08), chuẩn hóa mức occluded_level (R-06) và rà vệt nhòe chuyển động (R-07)."
+}
